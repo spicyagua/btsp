@@ -1,0 +1,13 @@
+body {
+  background-color: blue;
+}
+
+.borderedPanel {
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.img-centered {
+  margin: 0 auto;
+}
