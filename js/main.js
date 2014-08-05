@@ -37,6 +37,16 @@ EG6.UI.prototype = {
 
 //      jQuery("#tb").text(b.height());
       console.log("viewportSize: " + viewportSize.getWidth() + "x" + viewportSize.getHeight());
+
+      var display = jQuery("#spacer").css("display");
+      if(display == "none") {
+        console.log("extra padding not visible");
+      }
+      else {
+        console.log("Change pic column from " + jQuery("#picColumn").parent().height() +
+          " to " + jQuery("#spacer").parent().height());
+        jQuery("#picColumn").parent().height(jQuery("#spacer").parent().height());
+      }
   },
 
   piOrZero: function(num) {
