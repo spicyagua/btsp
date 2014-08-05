@@ -12,12 +12,15 @@ EG6.UI.prototype = {
   },
 
   redoLayout: function() {
-      console.log("foo");
+      console.log("===============================================");
       var b = $("body");
-      console.log(b.width() + " " + b.height());
+      console.log("Body dimensions: " + b.width() + "x" + b.height());
 
       var f = jQuery("#footer");
-      console.log(f.height());
+      console.log("Footer Height: " + f.height());
+
+      var lcp = jQuery("#leftBodyPanel");
+      console.log("Left body panel outer height: " + lcp.outerHeight());
 
       var lp = jQuery("#leftPanel");
       var rp = jQuery("#rightPanel");
@@ -27,8 +30,9 @@ EG6.UI.prototype = {
 
 //      lp.height(b.height() - f.height());
 //      rp.height(b.height() - f.height());
+      jQuery("#spacer").height(b.height() - f.height() -lcp.outerHeight());
       console.log("Left height: " + lp.height() + ", right: " + rp.height());
-      jQuery("#spacer").height(b.height() - f.height() - 50);
+      jQuery("#tb").text(b.height());
 
   }
 

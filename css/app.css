@@ -1,5 +1,6 @@
 body {
   background-color: blue;
+  overflow: hidden;
 }
 
 .borderedPanel {
@@ -12,3 +13,48 @@ body {
 .img-centered {
   margin: 0 auto;
 }
+/*
+html, body, .wrapper {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+
+.navigation, .content {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+}
+
+.wrapper {
+    display: table;
+    width: 100%;
+    margin-top: -43px;
+    padding-top: 43px;
+}
+
+.header {
+    height: 43px;
+    background: pink;
+}
+
+.row {
+    height: 100%;
+    margin: 0;
+    display: table-row;
+    &:before, &:after {
+        content: none;
+    }
+}
+
+.navigation {
+    background: #4a4d4e;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.content {
+    background: gray;
+}
+*/
