@@ -11,22 +11,23 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="col-md-4">
-        <div class="panel panel-default borderedPanel">
+        <div class="panel panel-default borderedPanel" id="leftPanel">
           <div class="panel-body">
             Left
           </div>
+          <div id="spacer" class="hidden-sm"></div>
         </div>
 
       </div>
       <div class="col-md-8">
-        <div class="panel panel-default borderedPanel">
+        <div class="panel panel-default borderedPanel" id="rightPanel">
           <div class="panel-body">
             <img class="img-responsive img-centered" src="bg_test.png"/>
           </div>
       </div>
     </div>
   </div>
-  <nav role="navigation" class="navbar navbar-default navbar-fixed-bottom">
+  <nav id="footer" role="navigation" class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -56,10 +57,11 @@
 
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
   <script type="text/javascript">
 
     jQuery(document).ready(function() {
-      console.log("foo");
+      EG6.app.init();
     });
 
   </script>
