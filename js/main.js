@@ -13,26 +13,33 @@ EG6.UI.prototype = {
 
   redoLayout: function() {
       console.log("===============================================");
-      var b = $("body");
-      console.log("Body dimensions: " + b.width() + "x" + b.height());
+
+      //This is crazy.  Try calculating everyone from the outside
+      var mc = jQuery("#myColumn");
+      var mcExtra = mc.outerHeight(true) - mc.innerHeight();
+
+      var mcp = mc.parent();
+      var mcpExtra = mcp.outerHeight(true) - mcp.innerHeight();
+
+
+      var tb = jQuery("#tb");
+      var tbExtra = tb.outerHeight(true);
 
       var f = jQuery("#footer");
-      console.log("Footer Height: " + f.height());
 
-      var lcp = jQuery("#leftBodyPanel");
-      console.log("Left body panel outer height: " + lcp.outerHeight());
+      jQuery("#spacer").height(viewportSize.getHeight() - tbExtra - mcExtra - mcpExtra - f.outerHeight(true));
 
-      var lp = jQuery("#leftPanel");
-      var rp = jQuery("#rightPanel");
+      console.log("mcExtra: " + mcExtra);
+      console.log("tbExtra: " + tbExtra);
+      console.log("mcpExtra: " + mcpExtra);
+      console.log("Footer Height: " + f.outerHeight(true));
+      console.log("Spacer height: " + jQuery("#spacer").height());
 
-      lp.css("margin", "20px 5px 20px 5px");
-      rp.css("margin", "20px 5px 20px 5px");
+//      jQuery("#tb").text(b.height());
+      console.log("viewportSize: " + viewportSize.getWidth() + "x" + viewportSize.getHeight());
+  },
 
-//      lp.height(b.height() - f.height());
-//      rp.height(b.height() - f.height());
-      jQuery("#spacer").height(b.height() - f.height() -lcp.outerHeight());
-      console.log("Left height: " + lp.height() + ", right: " + rp.height());
-      jQuery("#tb").text(b.height());
+  piOrZero: function(num) {
 
   }
 
